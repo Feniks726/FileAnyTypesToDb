@@ -1,0 +1,5 @@
+Add-Migration -Name Initial -OutputDir Migrations -Context MasterDataContext -Environment Development -Project MasterData.Context -StartupProject MasterData
+
+Script-Migration -From Migrations -To Migrations -Output DatabaseScripts\MasterData\0_Migrations.sql -Context MasterDataContext -Environment Development -Project MasterData.Context -StartupProject MasterData
+
+Remove-Migration -Context MasterDataContext -Environment Development -Project MasterData.Context -StartupProject MasterData

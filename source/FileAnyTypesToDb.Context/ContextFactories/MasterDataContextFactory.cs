@@ -1,15 +1,14 @@
 ﻿using System.Configuration;
-using System.Data.Entity.Infrastructure;
+using Microsoft.EntityFrameworkCore;
 
-namespace OrdersProject.Context.ContextFactories
+namespace FileAnyTypesToDb.Context.ContextFactories
 {
-    public class MasterDataContextFactory : IDbContextFactory<MasterDataContext>
+    public class MasterDataContextFactory : DbContext
     {
-        public MasterDataContext Create()
+ 
+        public MasterDataContext Create(DbContextOptions<MasterDataContext> options)
         {
-            var dbContext = new MasterDataContext();
-
-            dbContext.Database.CommandTimeout=int.Parse(ConfigurationManager.AppSettings["SQLCommandTimeOut"]);
+            var dbContext = new MasterDataContext(options);
 
             return dbContext;
         }
