@@ -12,7 +12,12 @@
             <ColumnDefinition Width="99*"/>
         </Grid.ColumnDefinitions>
         <Button Content="Button" HorizontalAlignment="Left" Margin="263,10,0,0" VerticalAlignment="Top" Click="Button_Click" Grid.Column="1"/>
-        <TextBox Name="txtEditor" Grid.ColumnSpan="2" Margin="-10,92,10,295" />
-        <DataGrid Margin="0,183,0,0" Grid.ColumnSpan="2"/>
+        <DataGrid Margin="10,77,10,0" Grid.ColumnSpan="2">
+            <DataGrid.Columns>
+                <DataGridCheckBoxColumn Header="Id" Width="Auto"/>
+                <DataGridCheckBoxColumn Header="Filename" Width="Auto"/>
+                <DataGridCheckBoxColumn Header="FileExtention" Width="Auto"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
