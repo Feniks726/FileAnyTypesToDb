@@ -8,16 +8,14 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="101*"/>
-            <ColumnDefinition Width="99*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="100*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="263,10,0,0" VerticalAlignment="Top" Click="Button_Click" Grid.Column="1"/>
-        <DataGrid Margin="10,77,10,0" Grid.ColumnSpan="2">
-            <DataGrid.Columns>
-                <DataGridCheckBoxColumn Header="Id" Width="Auto"/>
-                <DataGridCheckBoxColumn Header="Filename" Width="Auto"/>
-                <DataGridCheckBoxColumn Header="FileExtention" Width="Auto"/>
-            </DataGrid.Columns>
+        <Button Content="Refresh" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Click="Button_Click_1" Grid.Column="0"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="20,35,0,0" VerticalAlignment="Top" Click="Button_Click_2" Grid.Column="0"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="20,59,0,0" VerticalAlignment="Top" Click="Button_Click_3" Grid.Column="0"/>
+        <DataGrid Name="Grid1"  Margin="10,95,10,0" Grid.ColumnSpan="2" SelectedCellsChanged="Grid1_OnSelectedCellsChanged">
+
         </DataGrid>
     </Grid>
 </Window>

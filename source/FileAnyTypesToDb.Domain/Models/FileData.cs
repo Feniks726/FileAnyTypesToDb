@@ -15,21 +15,12 @@ namespace FileAnyTypesToDb.Domain.Models
         public Guid Id { get; set; }
 
         /// <summary>
-        /// Возвращает или задаёт идентификатор расширения файла.
-        /// </summary>
-        /// <value>
-        /// Идентификатор расширения файла.
-        /// </value>
-        [Column(Order = 1)]
-        public Guid FileExtentionsId { get; set; }
-
-        /// <summary>
         /// Возвращает имя файла.
         /// </summary>
         /// <value>
         /// Имя файла.
         /// </value>
-        [Column(Order = 2)]
+        [Column(Order = 1)]
         public string FileName { get; set; }
 
         /// <summary>
@@ -38,12 +29,7 @@ namespace FileAnyTypesToDb.Domain.Models
         /// <value>
         /// Содержимое файла.
         /// </value>
-        [Column(Order = 3)]
+        [Column(Order = 2)]
         public byte[] Content { get; set; }
-
-        /// <summary>
-        /// FileExtention
-        /// </summary>
-        public FileExtentions FileExtention { get; set; }
     }
 }
